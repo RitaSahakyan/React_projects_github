@@ -10,7 +10,9 @@ export const HomePage = () => {
     return (
         <div>
             <h1>Home Page</h1>
-            <button onClick={func}>To Do List</button>
+            <h2 onClick={() => func("/todolist")} style={{ cursor: "pointer" }}>
+                todolist
+            </h2>
         </div>
     );
 };

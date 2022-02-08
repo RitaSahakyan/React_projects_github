@@ -13,9 +13,4 @@ export const routes = [
     exact: true,
     page: () => <ToDoListPage />,
   },
-  {
-    path: "/testpage",
-    exact: true,
-    page: () => <TestPage />,
-  },
 ];
