@@ -1,4 +1,3 @@
-import { Styled } from "./ToDOModal.styled";
 import Modal from "react-modal";
 import { ModalHeader } from "./components/ModalHeader";
 import { ModalFooter } from "./components/ModalFooter";

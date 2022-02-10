@@ -1,6 +1,6 @@
 import {HomePage} from "../pages/HomePage";
-import {ToDoListPage} from "../pages/ToDoListPage/ToDoListPage";
-import {TestPage} from "../pages/TestPage";
+import {ToDoListPage} from "../pages/ToDoListPage";
+
 
 export const routes = [
   {
@@ -11,6 +11,6 @@ export const routes = [
   {
     path: "/todolist",
     exact: true,
-    page: () => <ToDoListPage />,
+    page: () => <ToDoListPage />
   },
 ];

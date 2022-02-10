@@ -13,9 +13,9 @@ const initialState = {
 export const ToDoListPage  = () =>{
     const [state, setState] = useState(initialState)
     const {list, isOpen, isEdit, isDel}= state
-    const addFunc = (value) => {
+    const addFunc = () => {
         const listClone =JSON.parse(JSON.stringify(list))
-        listClone.push(valuse)
+        listClone.push()
         setState((prevState) => ({...prevState, list: listClone}))
     }
 
@@ -27,21 +27,11 @@ export const ToDoListPage  = () =>{
         }
     }
 
-    const del = () =>{
-        const listClone = JSON.parse(JSON.stringify(list))
-        listClone.splice(value, 1)
-        setState((prevState) => ({ ...prevState, list: listClone }))
-    }
-
-    const openModal = (value ) => {
+    const openModal = () => {
         setState((prevState) => ({ ...prevState, isDel: true, isEdit: false }))
         handleModal("open")
     }
 
-    const openEditModal = (value) => {
-        setState((prevState) => ({ ...prevState, isDel: false, isEdit: true }));
-        handleModal("open")
-    }
 
     return (
         <div>
@@ -52,7 +42,7 @@ export const ToDoListPage  = () =>{
             isDel={isDel}
             />
             <ToDoListHeader addFunc={addFunc} />
-            <List list={list} del={openModal} edit={edit} />
+            <List list={list} del={openModal} />
         </div>
     )
 }
