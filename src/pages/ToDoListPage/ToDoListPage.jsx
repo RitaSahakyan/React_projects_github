@@ -1,7 +1,7 @@
 import {useState} from "react";
-import {ToDoModal} from "../../components/ToDoModal";
-import {ToDoListHeader} from "../components/ToDoListHeader";
-import {List} from "../components/List";
+import {ToDoModal} from "../../components";
+import {ToDoListHeader} from "./components/ToDoListHeader";
+import {List} from "./components/List";
 
 const initialState = {
     list: [],
@@ -27,11 +27,16 @@ export const ToDoListPage  = () =>{
         }
     }
 
-    const openModal = () => {
-        setState((prevState) => ({ ...prevState, isDel: true, isEdit: false }))
-        handleModal("open")
-    }
+    /*  const del = () => {
+  const listClone = JSON.parse(JSON.stringify(list))
+  listClone.splice(value, 1)
+  setState((prevState) => ({ ...prevState, list: listClone }))
+}*/
 
+    const openDelModal = () => {
+        setState((prevState) => ({ ...prevState, isDel: true, isEdit: false }));
+        handleModal("open");
+    };
 
     return (
         <div>
@@ -42,7 +47,7 @@ export const ToDoListPage  = () =>{
             isDel={isDel}
             />
             <ToDoListHeader addFunc={addFunc} />
-            <List list={list} del={openModal} />
+            <List list={list} del={openDelModal} />
         </div>
     )
 }
