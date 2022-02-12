@@ -1,6 +1,6 @@
 import Modal from "react-modal";
-import { ModalHeader } from "./components/ModalHeader";
-import { ModalFooter } from "./components/ModalFooter";
+import { ModalHeader } from "./ToDoModal/components/ModalHeader";
+import { ModalFooter } from "./ToDoModal/components/ModalFooter";
 
 export const ToDoModal = ({ isOpen, handleModal, isDel, isEdit }) => {
     const customStyles = {

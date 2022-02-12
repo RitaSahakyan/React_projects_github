@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {ToDoModal} from "../../components/ToDoModal/ToDoModal";
+import {ToDoModal} from "../../components/ToDoModal";
 import {ToDoListHeader} from "../components/ToDoListHeader";
 import {List} from "../components/List";
 
