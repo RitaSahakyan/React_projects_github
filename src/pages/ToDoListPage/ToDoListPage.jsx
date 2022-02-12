@@ -14,7 +14,7 @@ export const ToDoListPage  = () =>{
     const [state, setState] = useState(initialState)
     const {list, isOpen, isEdit, isDel}= state
     const addFunc = () => {
-        const listClone =JSON.parse(JSON.stringify(list))
+    const listClone =JSON.parse(JSON.stringify(list))
         listClone.push()
         setState((prevState) => ({...prevState, list: listClone}))
     }
