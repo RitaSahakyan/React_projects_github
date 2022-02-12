@@ -1,1 +1,1 @@
-export * from "./ToDOModal";
+export * from "./ToDoModal"

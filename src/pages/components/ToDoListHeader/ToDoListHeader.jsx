@@ -22,7 +22,7 @@ export const ToDoListHeader = ({addFunc}) => {
                 onChange={(e) => inputChange(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && func2()}
             />
-            <button onClick={func2}></buttonon>
+            <button onClick={func2}>Add</button>
         </div>
     )
 }

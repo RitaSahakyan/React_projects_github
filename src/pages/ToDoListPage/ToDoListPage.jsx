@@ -16,7 +16,7 @@ export const ToDoListPage  = () =>{
     const addFunc = () => {
     const listClone =JSON.parse(JSON.stringify(list))
         listClone.push()
-        setState((prevState) => ({...prevState, list: listClone}))
+        setState(...(prevState) => ({...prevState, list: listClone}))
     }
 
     const handleModal = (value) => {
